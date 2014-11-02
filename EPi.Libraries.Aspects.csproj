@@ -33,9 +33,9 @@
     <DefineConstants>POSTSHARP_CONSTRAINTS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
-    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
     <CodeAnalysisRuleSet>Solution Files\EPiServer.Libraries.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>bin\Release\EPiServer.Libraries.Aspects.XML</DocumentationFile>
   </PropertyGroup>
