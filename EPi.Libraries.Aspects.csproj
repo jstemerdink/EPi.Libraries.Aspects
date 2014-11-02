@@ -36,7 +36,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
     <RunCodeAnalysis>true</RunCodeAnalysis>
-    <CodeAnalysisRuleSet>..\Solution Files\EPiServer.Libraries.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>Solution Files\EPiServer.Libraries.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>bin\Release\EPiServer.Libraries.Aspects.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>

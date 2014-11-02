@@ -41,6 +41,10 @@ namespace EPiServer.Libraries.Aspects.Caching
     {
         #region Public Properties
 
+        /// <summary>
+        /// Gets the cache eviction policy.
+        /// </summary>
+        /// <value>The cache eviction policy.</value>
         public override CacheEvictionPolicy CacheEvictionPolicy
         {
             get

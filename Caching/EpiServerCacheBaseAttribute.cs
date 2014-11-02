@@ -47,8 +47,16 @@ namespace EPiServer.Libraries.Aspects.Caching
 
         #region Public Properties
 
+        /// <summary>
+        /// Gets the cache eviction policy.
+        /// </summary>
+        /// <value>The cache eviction policy.</value>
         public abstract CacheEvictionPolicy CacheEvictionPolicy { get; }
 
+        /// <summary>
+        /// Gets or sets the synchronized object instance cache.
+        /// </summary>
+        /// <value>The synchronized object instance cache.</value>
         protected Injected<ISynchronizedObjectInstanceCache> SynchronizedObjectInstanceCache { get; set; }
 
         #endregion
