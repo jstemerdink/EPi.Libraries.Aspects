@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/jstemerdink/EPi.Libraries.Aspects</projectUrl>
+    <iconUrl>http://world.episerver.com/PageFiles/3/Icons/Nuget.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright © Jeroen Stemerdink 2014</copyright>
+    <tags>PostSharp Caching AOP</tags>
+	<dependencies>
+            <dependency id="EPiServer.CMS.Core" version="[7.7.1, 8.0)" />
+            <dependency id="EPiServer.Framework" version="[7.7.1, 8.0)" />
+        </dependencies>
+  </metadata>
+  <files>
+        <file src="bin\Release\EPi.Libraries.Aspects.dll" target="lib\net40\EPi.Libraries.Aspects.dll" />
+        <file src="bin\Release\EPi.Libraries.Aspects.xml" target="lib\net40\EPi.Libraries.Aspects.xml" />
+        <file src="bin\Release\PostSharp.dll" target="lib\net40\PostSharp.dll" />
+        <file src="bin\Release\PostSharp.xml" target="lib\net40\PostSharp.xml" />
+    </files>
+</package>
