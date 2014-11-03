@@ -7,7 +7,7 @@
 *.DotSettings
 *.StyleCop
 *.sln.docstates
-*.GhostDoc.xml
+*.sln.GhostDoc.xml
 *.dic
 
 # Build results
