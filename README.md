@@ -22,3 +22,8 @@ With PostSharp you can simplify your code by moving frequently used actions into
 
 CI does not play nice with ‘Enable NuGet Package Restore’. I have not included the downloaded packages, only the packages.config. 
 So if you are downoading the project and want to build it locally, you will need to enable ‘Enable NuGet Package Restore’ yourself.
+
+## PostSharp
+
+[PostSharp](http://www.postsharp.net/) has generously provided a license for this project. So there will be no need to install PostSharp yourself, the package is ofcourse still needed.
+Let me know if this is not the case.
