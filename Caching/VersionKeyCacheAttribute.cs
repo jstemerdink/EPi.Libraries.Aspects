@@ -23,11 +23,12 @@
 
 using System;
 
+using EPiServer;
 using EPiServer.Framework.Cache;
 
 using PostSharp.Extensibility;
 
-namespace EPiServer.Libraries.Aspects.Caching
+namespace EPi.Libraries.Aspects.Caching
 {
     /// <summary>A cache attribute. Skip the execution of a method when its value is found in the EPiServer cache.</summary>
     /// <example>

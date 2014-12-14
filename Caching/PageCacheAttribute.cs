@@ -23,10 +23,12 @@
 
 using System;
 using System.Web;
+using System.Web.Caching;
 
+using EPiServer;
 using EPiServer.Framework.Cache;
 
-namespace EPiServer.Libraries.Aspects.Caching
+namespace EPi.Libraries.Aspects.Caching
 {
     /// <summary>
     ///     A cache attribute. Skip the execution of a method when its value is found in the EPiServer cache for the
@@ -47,10 +49,12 @@ namespace EPiServer.Libraries.Aspects.Caching
             get
             {
                 PageBase page = HttpContext.Current.Handler as PageBase;
+
                 return page == null
                            ? null
                            : new CacheEvictionPolicy(
                                  new[] { DataFactoryCache.PageCommonCacheKey(page.CurrentPage.PageLink) });
+                
             }
         }
 

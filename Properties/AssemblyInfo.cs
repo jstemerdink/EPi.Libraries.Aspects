@@ -30,7 +30,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly: AssemblyTitle("EPi.Libraries.Aspects")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Simplify the use of the EPiServer functionality by using aspects.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Jeroen Stemerdink")]
 [assembly: AssemblyProduct("EPi.Libraries.Aspects")]

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/jstemerdink/EPi.Libraries.Aspects/</projectUrl>
+    <iconUrl>http://world.episerver.com/PageFiles/3/Icons/Nuget.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>VersionKeyCache and PageCache Aspects</releaseNotes>
+    <copyright>Copyright © Jeroen Stemerdink 2014</copyright>
+    <tags>caching aop postsharp aspect</tags>
+    <dependencies>
+      <dependency id="EPiServer.CMS.Core" version="[7.7.1, 8.0)" />
+      <dependency id="EPiServer.CMS.UI.Core" version="[7.8.2, 8.0)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\$configuration$\PostSharp.dll" target="lib\net40"/>
+    <file src="bin\$configuration$\PostSharp.xml" target="lib\net40" />
+  </files>
+</package>

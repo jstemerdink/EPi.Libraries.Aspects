@@ -32,7 +32,7 @@ using EPiServer.ServiceLocation;
 using PostSharp.Aspects;
 using PostSharp.Extensibility;
 
-namespace EPiServer.Libraries.Aspects.Caching
+namespace EPi.Libraries.Aspects.Caching
 {
     /// <summary>The base class for EPiServer caching aspects.</summary>
     [Serializable]
@@ -52,12 +52,6 @@ namespace EPiServer.Libraries.Aspects.Caching
         /// </summary>
         /// <value>The cache eviction policy.</value>
         public abstract CacheEvictionPolicy CacheEvictionPolicy { get; }
-
-        /// <summary>
-        /// Gets or sets the synchronized object instance cache.
-        /// </summary>
-        /// <value>The synchronized object instance cache.</value>
-        protected Injected<ISynchronizedObjectInstanceCache> SynchronizedObjectInstanceCache { get; set; }
 
         #endregion
 
@@ -149,7 +143,7 @@ namespace EPiServer.Libraries.Aspects.Caching
             string cacheKey = GetCacheKey(this.methodName, args.Instance, args.Arguments);
 
             // Fetch the value from the cache. 
-            object value = SynchronizedObjectInstanceCache.Service.Get(cacheKey);
+            object value = ServiceLocator.Current.GetInstance<ISynchronizedObjectInstanceCache>().Get(cacheKey);
 
             if (value != null)
             {
@@ -189,7 +183,7 @@ namespace EPiServer.Libraries.Aspects.Caching
 
             string cacheKey = (string)args.MethodExecutionTag;
 
-            SynchronizedObjectInstanceCache.Service.Insert(cacheKey, args.ReturnValue, this.CacheEvictionPolicy);
+            ServiceLocator.Current.GetInstance<ISynchronizedObjectInstanceCache>().Insert(cacheKey, args.ReturnValue, this.CacheEvictionPolicy);
         }
 
         #endregion
