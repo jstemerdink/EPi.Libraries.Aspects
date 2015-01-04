@@ -18,8 +18,4 @@
       <dependency id="EPiServer.CMS.UI.Core" version="[7.8.2, 8.0)" />
     </dependencies>
   </metadata>
-  <files>
-    <file src="bin\$configuration$\PostSharp.dll" target="lib\net40"/>
-    <file src="bin\$configuration$\PostSharp.xml" target="lib\net40" />
-  </files>
 </package>
