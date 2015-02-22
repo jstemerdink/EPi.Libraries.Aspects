@@ -2,6 +2,8 @@
 
 By Jeroen Stemerdink
 
+[![Build status](https://ci.appveyor.com/api/projects/status/99c8yi19t3t440dt/branch/master?svg=true)](https://ci.appveyor.com/project/jstemerdink/episerver-libraries/branch/master)
+
 ## About
 
 With PostSharp you can simplify your code by moving frequently used actions into aspects.
