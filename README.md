@@ -1,4 +1,4 @@
-﻿# PostSharp Aspects or use with EPiServer 7. 
+﻿# PostSharp Aspects or use with EPiServer 8. 
 
 By Jeroen Stemerdink
 
@@ -10,8 +10,8 @@ With PostSharp you can simplify your code by moving frequently used actions into
 
 ## Requirements
 
-* EPiServer 7.7+
-* .Net 4.0
+* EPiServer 8+
+* .Net 4.5
 * PostSharp 4
 
 ## Deploy
