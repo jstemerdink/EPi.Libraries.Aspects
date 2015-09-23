@@ -153,7 +153,7 @@ namespace EPi.Libraries.Aspects.Caching
             string cacheKey = GetCacheKey(this.methodName, args.Instance, args.Arguments);
 
             // Fetch the value from the cache. 
-            object value = SynchronizedObjectInstanceCache.Service.Get(cacheKey);
+            object value = this.SynchronizedObjectInstanceCache.Service.Get(cacheKey);
 
             if (value != null)
             {
@@ -193,7 +193,7 @@ namespace EPi.Libraries.Aspects.Caching
 
             string cacheKey = (string)args.MethodExecutionTag;
 
-            SynchronizedObjectInstanceCache.Service.Insert(cacheKey, args.ReturnValue, this.CacheEvictionPolicy);
+            this.SynchronizedObjectInstanceCache.Service.Insert(cacheKey, args.ReturnValue, this.CacheEvictionPolicy);
         }
 
         #endregion
