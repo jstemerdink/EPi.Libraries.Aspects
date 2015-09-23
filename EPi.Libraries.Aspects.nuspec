@@ -7,7 +7,7 @@
     <authors>$author$</authors>
     <owners>$author$</owners>
     <projectUrl>https://github.com/jstemerdink/EPi.Libraries.Aspects/</projectUrl>
-    <iconUrl>http://world.episerver.com/PageFiles/3/Icons/Nuget.png</iconUrl>
+    <iconUrl>http://jstemerdink.net/images/js-nuget.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>VersionKeyCache and PageCache Aspects</releaseNotes>
