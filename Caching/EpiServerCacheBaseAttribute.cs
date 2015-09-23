@@ -1,4 +1,4 @@
-﻿// Copyright© 2014 Jeroen Stemerdink. All Rights Reserved.
+﻿// Copyright© 2015 Jeroen Stemerdink. All Rights Reserved.
 // 
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -48,10 +48,20 @@ namespace EPi.Libraries.Aspects.Caching
         #region Public Properties
 
         /// <summary>
-        /// Gets the cache eviction policy.
+        ///     Gets the cache eviction policy.
         /// </summary>
         /// <value>The cache eviction policy.</value>
         public abstract CacheEvictionPolicy CacheEvictionPolicy { get; }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        ///     Gets or sets the synchronized object instance cache.
+        /// </summary>
+        /// <value>The synchronized object instance cache.</value>
+        protected Injected<ISynchronizedObjectInstanceCache> SynchronizedObjectInstanceCache { get; set; }
 
         #endregion
 
@@ -143,7 +153,7 @@ namespace EPi.Libraries.Aspects.Caching
             string cacheKey = GetCacheKey(this.methodName, args.Instance, args.Arguments);
 
             // Fetch the value from the cache. 
-            object value = ServiceLocator.Current.GetInstance<ISynchronizedObjectInstanceCache>().Get(cacheKey);
+            object value = this.SynchronizedObjectInstanceCache.Service.Get(cacheKey);
 
             if (value != null)
             {
@@ -183,7 +193,7 @@ namespace EPi.Libraries.Aspects.Caching
 
             string cacheKey = (string)args.MethodExecutionTag;
 
-            ServiceLocator.Current.GetInstance<ISynchronizedObjectInstanceCache>().Insert(cacheKey, args.ReturnValue, this.CacheEvictionPolicy);
+            this.SynchronizedObjectInstanceCache.Service.Insert(cacheKey, args.ReturnValue, this.CacheEvictionPolicy);
         }
 
         #endregion

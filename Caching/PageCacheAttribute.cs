@@ -1,4 +1,4 @@
-﻿// Copyright© 2014 Jeroen Stemerdink. All Rights Reserved.
+﻿// Copyright© 2015 Jeroen Stemerdink. All Rights Reserved.
 // 
 // Permission is hereby granted, free of charge, to any person
 // obtaining a copy of this software and associated documentation
@@ -23,7 +23,6 @@
 
 using System;
 using System.Web;
-using System.Web.Caching;
 
 using EPiServer;
 using EPiServer.Framework.Cache;
@@ -54,7 +53,6 @@ namespace EPi.Libraries.Aspects.Caching
                            ? null
                            : new CacheEvictionPolicy(
                                  new[] { DataFactoryCache.PageCommonCacheKey(page.CurrentPage.PageLink) });
-                
             }
         }
 
